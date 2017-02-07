@@ -2,29 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <title></title>
+    <script src="https://use.fontawesome.com/e9d5225fb3.js"></script>
+    <script  src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="  crossorigin="anonymous"></script>
+    <script  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="  crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <header>
-<div id="logo">
+    <header><div id="logo">
   <img src="assets/img/logo.png" alt="" height="180px">
 </div>
+<nav id="top_navigation">
+  <ul>
+    
+    <li><a href="">+49 30 123 456</a></li>
+    
+    <li><a href="">info@bett-und-buch.de</a></li>
+    
+    <li><a href="">Facebook</a></li>
+    
+    <li><a href="">Instagram</a></li>
+    
+    <li><a href="">Twitter</a></li>
+    
+    <li><a href="">Kontakt</a></li>
+    
+    <li><a href="">DE</a></li>
+    
+    <li><a href="">EN</a></li>
+    
+  </ul>
+</nav>
 
-<ul>
-  
-  <li><a href="">Zimmer</a></li>
-  
-  <li><a href="">Baguetterie</a></li>
-  
-  <li><a href="">Veranstaltungsräume</a></li>
-  
-  <li><a href="">Lage</a></li>
-  
-</ul>
+
+
+<nav id="main_navigation">
+  <ul>
+    
+    <li><a href="">Zimmer</a></li>
+    
+    <li><a href="">Baguetterie</a></li>
+    
+    <li><a href="">Veranstaltungsräume</a></li>
+    
+    <li><a href="">Lage</a></li>
+    
+  </ul>
+</nav>
 </header>
     <div id="slider">
+  <div id="booking_form">
+    <div class="be-group">
+      <span class="be-input">
+        <input type="text" name="arrive" id="arrive" value="Ankunft">
+      </span>
+      <span class="be-input">
+        <input type="text" name="depart" id="depart" value="Abreise">
+      </span>
+    </div>
+    <div class="be-group">
+      <span class="be-input">
+        <select name="adults" value="Erwachsene">
+          <option value="1">1 Erwachsener</option>
+          <option value="2">2 Erwachsene</option>
+          <option value="3">3 Erwachsene</option>
+        </select>
+      </span>
+      <span class="be-input">
+        <select type="select" name="children" value="Children">
+          <option value="1">1 Kind</option>
+          <option value="2">2 Kinder</option>
+        </select>
+      </span>
+    </div>
+    <div class="be-group">
+      <span class="be-input">
+        <button type="submit" id="submit">
+          <i class="fa fa-icon-search"></i>Buchen
+        </button>
+      </span>
+    </div>
+  </div>
   <div class="teaser">
     <h2>Eine unvergessliche Zeit verbringen</h2>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -34,6 +94,7 @@
 
     <div class="main">
       <h1>Hello, world</h1>
+
     </div>
 
     <footer>
@@ -51,5 +112,11 @@
   
 </ul>
 </footer>
+
+    <script>
+  $( function() {
+    $( "#arrive, #depart" ).datepicker();
+  } );
+  </script>
   </body>
 </html>

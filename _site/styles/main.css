@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,6 +21,10 @@ body {
     body {
       width: 100%; } }
 
+/*Top Adjustment */
+header, #slider {
+  top: -100px; }
+
 header, footer {
   width: 100%;
   background: #000;
@@ -30,26 +35,20 @@ header, footer {
 
 #logo {
   position: relative;
-  top: 115px;
-  left: 50px;
   height: 150px;
   width: 150px;
-  z-index: 2; }
+  z-index: 2;
+  top: 130px;
+  left: 50px; }
   #logo img {
     height: 150px;
     width: 150px;
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.35)); }
 
 header {
-  height: 250px;
   background: #fff;
-  position: relative;
-  top: -100px; }
-  header ul {
-    background: linear-gradient(to bottom, #193149, #28435e);
-    border-top: 2px solid #ff4d1a;
-    border-bottom: 2px solid #ff4d1a;
-    height: 75px;
+  position: relative; }
+  header nav ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -57,14 +56,38 @@ header {
     align-items: center;
     list-style-type: none; }
     @media (max-width: 37.5em) {
-      header ul {
+      header nav ul {
         flex-direction: column; } }
-  header li {
+  header nav li {
     margin-right: 5px; }
     @media (max-width: 37.5em) {
-      header li {
+      header nav li {
         margin-right: 0; } }
-  header a {
+  header nav#top_navigation {
+    align-self: flex-end; }
+    header nav#top_navigation li {
+      margin-right: 10px; }
+      header nav#top_navigation li::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        color: #ff4d1a;
+        font-size: 110%;
+        margin-right: 0.25em; }
+      header nav#top_navigation li:nth-of-type(1)::before {
+        content: ""; }
+      header nav#top_navigation li:nth-of-type(2)::before {
+        content: ""; }
+      header nav#top_navigation li a {
+        color: #193149; }
+  header nav#main_navigation ul {
+    background: linear-gradient(to bottom, #193149, #28435e);
+    border-top: 2px solid #ff4d1a;
+    border-bottom: 2px solid #ff4d1a;
+    height: 75px; }
+  header nav#main_navigation a {
     padding: 12px;
     color: #fff;
     transition: all 0.25s;
@@ -72,7 +95,7 @@ header {
     text-transform: uppercase;
     font-weight: 600;
     height: 60px; }
-    header a:hover {
+    header nav#main_navigation a:hover {
       background: #fff;
       color: #ff4d1a;
       box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
@@ -89,7 +112,6 @@ header {
   background: url("../assets/img/image01.jpg");
   background-size: cover;
   position: relative;
-  top: -112px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,6 +124,42 @@ header {
     opacity: 0;
     animation: fadeIn 1s 1s, fromBottom 1s 1s;
     animation-fill-mode: forwards; }
+
+#booking_form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%; }
+  #booking_form input, #booking_form button, #booking_form select {
+    padding: 10px;
+    font-size: 105%;
+    font-weight: 600;
+    background: transparent;
+    border: 0;
+    width: 100%; }
+    #booking_form input:focus, #booking_form button:focus, #booking_form select:focus {
+      box-shadow: none;
+      outline-color: #fff; }
+  #booking_form input, #booking_form select {
+    color: #534132; }
+  #booking_form button {
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
+    background: #cca770;
+    color: #fff; }
+    #booking_form button:active {
+      box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85); }
+  #booking_form .be-group {
+    display: flex;
+    flex: 1 0 40%; }
+    #booking_form .be-group:nth-of-type(3) {
+      flex: 1 0 20%; }
+  #booking_form .be-input {
+    box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
+    border: 0;
+    background: rgba(255, 255, 255, 0.45);
+    margin: 0;
+    width: 100%;
+    display: inline-block; }
 
 @keyframes fadeIn {
   0% {

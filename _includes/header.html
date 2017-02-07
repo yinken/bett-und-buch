@@ -1,10 +1,20 @@
-
 <div id="logo">
   <img src="assets/img/logo.png" alt="" height="180px">
 </div>
+<nav id="top_navigation">
+  <ul>
+    {% for top_navigation in site.data.top_navigation %}
+    <li><a href="{{ top_navigation.url }}">{{ top_navigation.title}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 
-<ul>
-  {% for main_navigation in site.data.main_navigation %}
-  <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
-  {% endfor %}
-</ul>
+
+
+<nav id="main_navigation">
+  <ul>
+    {% for main_navigation in site.data.main_navigation %}
+    <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
