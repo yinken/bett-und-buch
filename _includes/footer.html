@@ -1,0 +1,6 @@
+
+<ul>
+  {% for footer_navigation in site.data.footer_navigation %}
+  <li><a href="{{ footer_navigation.url }}">{{ footer_navigation.title}}</a></li>
+  {% endfor %}
+</ul>

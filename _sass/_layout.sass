@@ -1,0 +1,111 @@
+body
+  margin: 0 auto
+  width: 80%
+  max-width: 1200px
+  height: 100vh
+  background: #fff
+  @include breakpoint(mobileonly)
+    width: 100%
+
+
+header, footer
+  width: 100%
+  background: #000
+  min-height: 50px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+#logo
+  position: relative
+  top: 115px
+  left: 50px
+  height: 150px
+  width: 150px
+  z-index: 2
+  img
+    height: 150px
+    width: 150px
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,.35))
+
+
+header
+  height: 250px
+  background: #fff
+  position: relative
+  top: -100px
+
+  ul
+    background: $blue-gradient
+    border-top: 2px solid $brown
+    border-bottom: 2px solid $brown
+    height: 75px
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    list-style-type: none
+    @include breakpoint(mobileonly)
+      flex-direction: column
+
+  li
+    margin-right: 5px
+    @include breakpoint(mobileonly)
+      margin-right: 0
+  a
+    padding: 12px
+    color: #fff
+    transition: all .25s
+    text-shadow: 1px 1px 1px #000
+    text-transform: uppercase
+    font-weight: 600
+    height: 60px
+
+    &:hover
+      background: #fff
+      color: $brown
+      box-shadow: inset 5px 5px 10px -5px rgba(0,0,0,.85)
+      background: linear-gradient(to bottom, $dark-blue, $darker-blue)
+      //border-left: 1px solid rgba(255,255,255,.45)
+      //border-right: 1px solid rgba(255,255,255,.45)
+
+
+.main
+  border: 1px solid $grey
+  padding: 20px
+  background: $background
+
+#slider
+  height: 650px
+  width: 100%
+  background: url('../assets/img/image01.jpg')
+  background-size: cover
+  position: relative
+  top: -112px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  .teaser
+    padding: 20px
+    color: #fff
+    text-shadow: 1px 1px 2px #000
+    width: 50%
+    opacity: 0
+    animation: fadeIn 1s 1s, fromBottom 1s 1s
+    animation-fill-mode: forwards
+
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fromBottom
+  0%
+    transform: translateY(50px)
+  100%
+    transform: translateY(0px)

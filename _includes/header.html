@@ -1,0 +1,10 @@
+
+<div id="logo">
+  <img src="assets/img/logo.png" alt="" height="180px">
+</div>
+
+<ul>
+  {% for main_navigation in site.data.main_navigation %}
+  <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
+  {% endfor %}
+</ul>
