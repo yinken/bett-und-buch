@@ -16,13 +16,13 @@ body {
   width: 80%;
   max-width: 1200px;
   height: 100vh;
-  background: #fff; }
+  background: #f2ebd4; }
   @media (max-width: 37.5em) {
     body {
       width: 100%; } }
 
 /*Top Adjustment */
-header, #slider {
+header, #slider-wrapper {
   top: -100px; }
 
 header, footer {
@@ -38,7 +38,7 @@ header, footer {
   height: 150px;
   width: 150px;
   z-index: 2;
-  top: 130px;
+  top: 116px;
   left: 50px; }
   #logo img {
     height: 150px;
@@ -46,7 +46,7 @@ header, footer {
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.35)); }
 
 header {
-  background: #fff;
+  background: #f2ebd4;
   position: relative; }
   header nav ul {
     display: flex;
@@ -82,41 +82,60 @@ header {
         content: ""; }
       header nav#top_navigation li a {
         color: #193149; }
-  header nav#main_navigation ul {
-    background: linear-gradient(to bottom, #193149, #28435e);
-    border-top: 2px solid #ff4d1a;
-    border-bottom: 2px solid #ff4d1a;
-    height: 75px; }
-  header nav#main_navigation a {
-    padding: 12px;
-    color: #fff;
-    transition: all 0.25s;
-    text-shadow: 1px 1px 1px #000;
-    text-transform: uppercase;
-    font-weight: 600;
-    height: 60px; }
-    header nav#main_navigation a:hover {
-      background: #fff;
-      color: #ff4d1a;
-      box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
-      background: linear-gradient(to bottom, #28435e, #193149); }
+  header nav#main_navigation {
+    width: 100%;
+    margin: 0 auto; }
+    header nav#main_navigation::before, header nav#main_navigation::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: -9px;
+      z-index: -1;
+      border: 5px solid;
+      border-color: #ff4d1a transparent transparent transparent; }
+    header nav#main_navigation::before {
+      left: 0; }
+    header nav#main_navigation::after {
+      right: 0; }
+    header nav#main_navigation ul {
+      background: linear-gradient(to bottom, #193149, #28435e);
+      border-top: 2px solid #ff4d1a;
+      border-bottom: 2px solid #ff4d1a;
+      height: 46px; }
+    header nav#main_navigation a {
+      padding: 12px;
+      color: #fff;
+      transition: all 0.25s;
+      text-shadow: 1px 1px 1px #000;
+      text-transform: uppercase;
+      font-weight: 600;
+      height: 60px; }
+      header nav#main_navigation a:hover {
+        background: #fff;
+        color: #ff4d1a;
+        box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
+        background: linear-gradient(to bottom, #28435e, #193149); }
 
 .main {
   border: 1px solid #ccc;
   padding: 20px;
   background: #fff; }
 
-#slider {
+#slider-wrapper {
+  margin: 0 auto;
   height: 650px;
-  width: 100%;
-  background: url("../assets/img/image01.jpg");
+  width: calc(100% - 10px);
   background-size: cover;
+  border-bottom: 2px solid #ff4d1a;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-  #slider .teaser {
+  align-items: center;
+  overflow: hidden; }
+  #slider-wrapper .teaser {
     padding: 20px;
     color: #fff;
     text-shadow: 1px 1px 2px #000;
@@ -129,7 +148,14 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80%; }
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100;
+  top: 45%;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 2px; }
   #booking_form input, #booking_form button, #booking_form select {
     padding: 10px;
     font-size: 105%;
@@ -143,7 +169,6 @@ header {
   #booking_form input, #booking_form select {
     color: #534132; }
   #booking_form button {
-    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
     background: #cca770;
     color: #fff; }
     #booking_form button:active {
@@ -156,7 +181,6 @@ header {
   #booking_form .be-input {
     box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85);
     border: 0;
-    background: rgba(255, 255, 255, 0.45);
     margin: 0;
     width: 100%;
     display: inline-block; }

@@ -3,12 +3,12 @@ body
   width: 80%
   max-width: 1200px
   height: 100vh
-  background: #fff
+  background: $sepia
   @include breakpoint(mobileonly)
     width: 100%
 
 /*Top Adjustment*/
-header, #slider
+header, #slider-wrapper
   top: -100px
 
 header, footer
@@ -24,7 +24,7 @@ header, footer
   height: 150px
   width: 150px
   z-index: 2
-  top: 130px
+  top: 116px
   left: 50px
   img
     height: 150px
@@ -32,7 +32,7 @@ header, footer
     filter: drop-shadow(2px 2px 3px rgba(0,0,0,.35))
 
 header
-  background: #fff
+  background: $sepia
   position: relative
 
   nav
@@ -77,14 +77,27 @@ header
 
 
   nav#main_navigation
+    width: 100%
+    margin: 0 auto
+    &::before, &::after
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      position: absolute
+      bottom: -9px
+      z-index: -1
+      border: 5px solid
+      border-color: $brown transparent transparent transparent
+    &::before
+      left: 0
+    &::after
+      right: 0
     ul
       background: $blue-gradient
       border-top: 2px solid $brown
       border-bottom: 2px solid $brown
-      height: 75px
-
-
-
+      height: 46px
     a
       padding: 12px
       color: #fff
@@ -108,17 +121,19 @@ header
   padding: 20px
   background: $background
 
-#slider
+#slider-wrapper
+  margin: 0 auto
   height: 650px
-  width: 100%
-  background: url('../assets/img/image01.jpg')
+  width: calc(100% - 10px)
+  //background: url('../assets/img/image01.jpg')
   background-size: cover
+  border-bottom: 2px solid $brown
   position: relative
-
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
+  overflow: hidden
 
   .teaser
     padding: 20px
@@ -134,6 +149,14 @@ header
   flex-direction: row
   flex-wrap: wrap
   width: 80%
+  margin: 0 auto
+  position: relative
+  z-index: 100
+  top: 45%
+  padding: 4px
+  //border: 2px solid rgba(255,255,255,.75)
+  background: rgba(255,255,255,.75)
+  border-radius: 2px
   input, button, select
     padding: 10px
     font-size: 105%
@@ -147,7 +170,7 @@ header
   input, select
     color: #534132
   button
-    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.85)
+    //box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.85)
     background: #cca770
     color: #fff
     &:active
@@ -161,7 +184,7 @@ header
   .be-input
     box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.85)
     border: 0
-    background: rgba(255,255,255,.45)
+    //background: rgba(255,255,255,.45)
     margin: 0
     width: 100%
     display: inline-block

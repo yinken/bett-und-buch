@@ -1,39 +1,66 @@
-<div id="slider">
-  <div id="booking_form">
-    <div class="be-group">
-      <span class="be-input">
-        <input type="text" name="arrive" id="arrive" value="Ankunft">
-      </span>
-      <span class="be-input">
-        <input type="text" name="depart" id="depart" value="Abreise">
-      </span>
+<script>
+    jQuery(document).ready(function ($) {
+        var _SlideshowTransitions = [
+
+        ];
+        var options = {
+          $AutoPlay: true,
+          $Idle: 5000,
+          $SlideDuration: 1000,
+          $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$,
+            $ChanceToShow: 2
+          },
+          $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: _SlideshowTransitions,
+            $TransitionsOrder: 1,
+            $ShowLink: true
+          }
+        };
+        var jssor_slider1 = new $JssorSlider$('slider', options);
+    });
+</script>
+
+<div id="slider-wrapper">
+  <div id="slider" style="position: relative; width: 1190px; height: 650px;">
+    <div id="booking_form">
+      <div class="be-group">
+        <span class="be-input">
+          <input type="text" name="arrive" id="arrive" value="Ankunft">
+        </span>
+        <span class="be-input">
+          <input type="text" name="depart" id="depart" value="Abreise">
+        </span>
+      </div>
+      <div class="be-group">
+        <span class="be-input">
+          <select name="adults" value="Erwachsene">
+            <option value="1">1 Erwachsener</option>
+            <option value="2">2 Erwachsene</option>
+            <option value="3">3 Erwachsene</option>
+          </select>
+        </span>
+        <span class="be-input">
+          <select type="select" name="children" value="Children">
+            <option value="1">1 Kind</option>
+            <option value="2">2 Kinder</option>
+          </select>
+        </span>
+      </div>
+      <div class="be-group">
+        <span class="be-input">
+          <button type="submit" id="submit">
+            <i class="fa fa-icon-search"></i>Buchen
+          </button>
+        </span>
+      </div>
     </div>
-    <div class="be-group">
-      <span class="be-input">
-        <select name="adults" value="Erwachsene">
-          <option value="1">1 Erwachsener</option>
-          <option value="2">2 Erwachsene</option>
-          <option value="3">3 Erwachsene</option>
-        </select>
-      </span>
-      <span class="be-input">
-        <select type="select" name="children" value="Children">
-          <option value="1">1 Kind</option>
-          <option value="2">2 Kinder</option>
-        </select>
-      </span>
-    </div>
-    <div class="be-group">
-      <span class="be-input">
-        <button type="submit" id="submit">
-          <i class="fa fa-icon-search"></i>Buchen
-        </button>
-      </span>
-    </div>
-  </div>
-  <div class="teaser">
-    <h2>Eine unvergessliche Zeit verbringen</h2>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-  </div>
+  <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1200px; height: 650px;">
+          <div><img u="image" src="assets/img/image01.jpg" /></div>
+          <div><img u="image" src="assets/img/image02.jpg" /></div>
+          <div><img u="image" src="assets/img/image03.jpg" /></div>
+      </div>
   </div>
 </div>
