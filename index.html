@@ -4,24 +4,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <title></title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    {% for style in site.static_files %}{% if style.path contains '.css' %}
+    <link rel="stylesheet" href="{{ site.baseurl }}{{ style.path }}">{% endif %}{% endfor %}
     <script src="https://use.fontawesome.com/e9d5225fb3.js"></script>
-    <script  src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="  crossorigin="anonymous"></script>    
-    <script  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="  crossorigin="anonymous"></script>
-    <script  src="js/jssor.slider-22.2.0.min.js"></script>
+    {% for script in site.static_files %}{% if script.path contains '.js' %}
+    <script src="{{ site.baseurl }}{{ script.path }}"></script>{% endif %}{% endfor %}
   </head>
 
   <body>
     <header>{% include header.html %}</header>
     {% include slider.html %}
-    <div class="main">
-      <h1>Hello, world</h1>
+    <div id="main">
+      <div class="column two-thirds">
+        <h1>Eine unvergessliche Zeit verbringen</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="column one-third">
 
+      </div>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
-
-    <footer>{% include footer.html %}</footer>
 
     <script>
   $( function() {

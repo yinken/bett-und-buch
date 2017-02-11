@@ -1,20 +1,46 @@
-<div id="logo">
-  <img src="assets/img/logo.png" alt="" height="180px">
+
+
+<div id="top_navigation">
+  <nav>
+    <ul class="contact">
+      {% for top_navigation in site.data.top_navigation %}
+      <li><a href="{{ top_navigation.url }}">{{ top_navigation.title}}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="social">
+      <li><a class="facebook" href="#"><i class="fa fa-facebook-square" aria-hidden="true"></a></i></li>
+      <li><a class="twitter" href="#"><i class="fa fa-twitter-square" aria-hidden="true"></a></i></li>
+      <li><a class="instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></a></i></i></li>
+    </ul>
+    <ul class="lang">
+      <li><a href="#"><img src="data:image/webp;base64,UklGRiYBAABXRUJQVlA4TBoBAAAvO8AJAA/iprZtNfooIC2DCY6JrNRMGlBABKRMxR4iAMZEuqnGArpw0DaSJDm17x2hI3b85bCNJEXyMXP+GfLdM0jzrzBpA6a7rwAy/xw6gd8ACHAAxutXYO+/ZxHBHzx4DxzwpHPYKvnXg9vE8/S4UyAw7iKKv7uIur++HUWyHsYnBru83m7XrnKUMHzF7op6mq/EHQk41CiPSuYuauTsLXUX3iN8hiAQRjMIAgiEf/6fAAoIOLJt24xi2ygjKDvW/Id2W1nViej/BBB/hSTH0Kgsdf++YT8vOY1gD5q0DTzUlTqPCGvXQV0qfGjB+qLxyPagx6u9mwbY8bLoqhK0ak9xXfxAiyqZSZoCtso3fQXbnvVnnoDmNxM=" height="15px" alt="de"></a></li>
+      <li><a href="#"><img src="data:image/webp;base64,UklGRiIBAABXRUJQVlA4TBUBAAAvT8AJAH9gpraNBv8lYDKa/RIKyK2c4kgy4KiqvfjJCEWRpEYKBgE3/BCTb+REZQzNf1S9/uFvc2P3AOhZYZNWAk7X8wMAQgAA4FbbtqxBFrAFbAPo3D42YAtmoHdqegags+gAGSAZIT09T+x77nhSRvRfkdu2jSLdOz/xKKmdTJgpKLyM0m4lmdMohPuhk6AUnASlkZOgdCIJVztDEq5kgnRgCdKBkQ6MdVDvMAZ7h8W35LF3uH2LuFI0Fc0n67Okt9xOJg+SVI7XJZqYd8znEf598/3eQTWajSTdXF6eHZeXd6rF6zLvWdJqEHZbxziEnXv2lPsfJGb/G0nR/yUpB4lZSMpDUh7URqAuBHUhqAtBXQgKAA==" height="15px" alt="en"></a></li>
+    </ul>
+</nav>
 </div>
-<nav id="top_navigation">
-  <ul>
-    {% for top_navigation in site.data.top_navigation %}
-    <li><a href="{{ top_navigation.url }}">{{ top_navigation.title}}</a></li>
-    {% endfor %}
-  </ul>
+
+
+
+<div id="main_navigation">
+  <!--<div id="logo" ><img src="assets/img/logo.png" alt="" ></div>-->
+  <nav>
+    <ul>
+      <li id="logo"><a href="#"><img src="assets/img/logo.png" alt=""></a></li>
+      {% for main_navigation in site.data.main_navigation %}
+      <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+
+<div id="scroll_navigation" class="nav-up">
+  <!--<div id="fixed-logo" ><img src="assets/img/logo-sm.png" alt="" ></div>-->
+  <nav>
+    <ul>
+      <li id="logo-sm"><a href="#"> <img src="assets/img/logo-sm.png" alt=""> </a></li>
+      {% for main_navigation in site.data.main_navigation %}
+      <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
+      {% endfor %}
+    </ul>
 </nav>
-
-
-
-<nav id="main_navigation">
-  <ul>
-    {% for main_navigation in site.data.main_navigation %}
-    <li><a href="{{ main_navigation.url }}">{{ main_navigation.title}}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
+</div>

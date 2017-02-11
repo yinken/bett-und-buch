@@ -2,61 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <title></title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
     <script src="https://use.fontawesome.com/e9d5225fb3.js"></script>
-    <script  src="https://code.jquery.com/jquery-2.2.4.min.js"  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="  crossorigin="anonymous"></script>    
-    <script  src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="  crossorigin="anonymous"></script>
-    <script  src="js/jssor.slider-22.2.0.min.js"></script>
+    
+    <script src="/assets/js/jquery-3.1.1.slim.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/jssor.slider-22.2.0.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
   </head>
 
   <body>
-    <header><div id="logo">
-  <img src="assets/img/logo.png" alt="" height="180px">
+    <header>
+
+<div id="top_navigation">
+  <nav>
+    <ul class="contact">
+      
+      <li><a href="">+49 30 123 456</a></li>
+      
+      <li><a href="">info@bett-und-buch.de</a></li>
+      
+      <li><a href="">Kontakt</a></li>
+      
+    </ul>
+    <ul class="social">
+      <li><a class="facebook" href="#"><i class="fa fa-facebook-square" aria-hidden="true"></a></i></li>
+      <li><a class="twitter" href="#"><i class="fa fa-twitter-square" aria-hidden="true"></a></i></li>
+      <li><a class="instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></a></i></i></li>
+    </ul>
+    <ul class="lang">
+      <li><a href="#"><img src="data:image/webp;base64,UklGRiYBAABXRUJQVlA4TBoBAAAvO8AJAA/iprZtNfooIC2DCY6JrNRMGlBABKRMxR4iAMZEuqnGArpw0DaSJDm17x2hI3b85bCNJEXyMXP+GfLdM0jzrzBpA6a7rwAy/xw6gd8ACHAAxutXYO+/ZxHBHzx4DxzwpHPYKvnXg9vE8/S4UyAw7iKKv7uIur++HUWyHsYnBru83m7XrnKUMHzF7op6mq/EHQk41CiPSuYuauTsLXUX3iN8hiAQRjMIAgiEf/6fAAoIOLJt24xi2ygjKDvW/Id2W1nViej/BBB/hSTH0Kgsdf++YT8vOY1gD5q0DTzUlTqPCGvXQV0qfGjB+qLxyPagx6u9mwbY8bLoqhK0ak9xXfxAiyqZSZoCtso3fQXbnvVnnoDmNxM=" height="15px" alt="de"></a></li>
+      <li><a href="#"><img src="data:image/webp;base64,UklGRiIBAABXRUJQVlA4TBUBAAAvT8AJAH9gpraNBv8lYDKa/RIKyK2c4kgy4KiqvfjJCEWRpEYKBgE3/BCTb+REZQzNf1S9/uFvc2P3AOhZYZNWAk7X8wMAQgAA4FbbtqxBFrAFbAPo3D42YAtmoHdqegags+gAGSAZIT09T+x77nhSRvRfkdu2jSLdOz/xKKmdTJgpKLyM0m4lmdMohPuhk6AUnASlkZOgdCIJVztDEq5kgnRgCdKBkQ6MdVDvMAZ7h8W35LF3uH2LuFI0Fc0n67Okt9xOJg+SVI7XJZqYd8znEf598/3eQTWajSTdXF6eHZeXd6rF6zLvWdJqEHZbxziEnXv2lPsfJGb/G0nR/yUpB4lZSMpDUh7URqAuBHUhqAtBXQgKAA==" height="15px" alt="en"></a></li>
+    </ul>
+</nav>
 </div>
-<nav id="top_navigation">
-  <ul>
-    
-    <li><a href="">+49 30 123 456</a></li>
-    
-    <li><a href="">info@bett-und-buch.de</a></li>
-    
-    <li><a href="">Facebook</a></li>
-    
-    <li><a href="">Instagram</a></li>
-    
-    <li><a href="">Twitter</a></li>
-    
-    <li><a href="">Kontakt</a></li>
-    
-    <li><a href="">DE</a></li>
-    
-    <li><a href="">EN</a></li>
-    
-  </ul>
+
+
+
+<div id="main_navigation">
+  <!--<div id="logo" ><img src="assets/img/logo.png" alt="" ></div>-->
+  <nav>
+    <ul>
+      <li id="logo"><a href="#"><img src="assets/img/logo.png" alt=""></a></li>
+      
+      <li><a href="">Zimmer</a></li>
+      
+      <li><a href="">Baguetterie</a></li>
+      
+      <li><a href="">Veranstaltungsräume</a></li>
+      
+      <li><a href="">Lage</a></li>
+      
+    </ul>
+  </nav>
+</div>
+
+<div id="scroll_navigation" class="nav-up">
+  <!--<div id="fixed-logo" ><img src="assets/img/logo-sm.png" alt="" ></div>-->
+  <nav>
+    <ul>
+      <li id="logo-sm"><a href="#"> <img src="assets/img/logo-sm.png" alt=""> </a></li>
+      
+      <li><a href="">Zimmer</a></li>
+      
+      <li><a href="">Baguetterie</a></li>
+      
+      <li><a href="">Veranstaltungsräume</a></li>
+      
+      <li><a href="">Lage</a></li>
+      
+    </ul>
 </nav>
-
-
-
-<nav id="main_navigation">
-  <ul>
-    
-    <li><a href="">Zimmer</a></li>
-    
-    <li><a href="">Baguetterie</a></li>
-    
-    <li><a href="">Veranstaltungsräume</a></li>
-    
-    <li><a href="">Lage</a></li>
-    
-  </ul>
-</nav>
+</div>
 </header>
     <script>
     jQuery(document).ready(function ($) {
+        var sliderWidth = $('body').width();
         var _SlideshowTransitions = [
-
         ];
         var options = {
           $AutoPlay: true,
@@ -74,72 +99,73 @@
           }
         };
         var jssor_slider1 = new $JssorSlider$('slider', options);
+        $('#slider, .slide').css('width',sliderWidth);
     });
 </script>
 
 <div id="slider-wrapper">
-  <div id="slider" style="position: relative; width: 1190px; height: 650px;">
-    <div id="booking_form">
-      <div class="be-group">
-        <span class="be-input">
-          <input type="text" name="arrive" id="arrive" value="Ankunft">
-        </span>
-        <span class="be-input">
-          <input type="text" name="depart" id="depart" value="Abreise">
-        </span>
-      </div>
-      <div class="be-group">
-        <span class="be-input">
-          <select name="adults" value="Erwachsene">
-            <option value="1">1 Erwachsener</option>
-            <option value="2">2 Erwachsene</option>
-            <option value="3">3 Erwachsene</option>
-          </select>
-        </span>
-        <span class="be-input">
-          <select type="select" name="children" value="Children">
-            <option value="1">1 Kind</option>
-            <option value="2">2 Kinder</option>
-          </select>
-        </span>
-      </div>
-      <div class="be-group">
-        <span class="be-input">
-          <button type="submit" id="submit">
-            <i class="fa fa-icon-search"></i>Buchen
-          </button>
-        </span>
-      </div>
-    </div>
-  <!-- Slides Container -->
-    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1200px; height: 650px;">
-          <div><img u="image" src="assets/img/image01.jpg" /></div>
-          <div><img u="image" src="assets/img/image02.jpg" /></div>
-          <div><img u="image" src="assets/img/image03.jpg" /></div>
-      </div>
+
+  <div id="slider" style="position: relative; height: 650px;">
+    <div id="slider-content">
+      <div id="booking_form">
+  <div class="be-group">
+    <span class="be-input">
+      <input type="text" name="arrive" id="arrive" value="Ankunft">
+    </span>
+    <span class="be-input">
+      <input type="text" name="depart" id="depart" value="Abreise">
+    </span>
+  </div>
+  <div class="be-group">
+    <span class="be-input">
+      <select name="adults" value="Erwachsene">
+        <option value="1">1 Erwachsener</option>
+        <option value="2">2 Erwachsene</option>
+        <option value="3">3 Erwachsene</option>
+      </select>
+    </span>
+    <span class="be-input">
+      <select type="select" name="children" value="Children">
+        <option value="1">1 Kind</option>
+        <option value="2">2 Kinder</option>
+      </select>
+    </span>
+  </div>
+  <div class="be-group">
+    <span class="be-input">
+      <button type="submit" id="submit">
+        <i class="fa fa-icon-search"></i>Buchen
+      </button>
+    </span>
   </div>
 </div>
 
-    <div class="main">
-      <h1>Hello, world</h1>
+      <div class="teaser">
+  <h2>Eine unvergessliche Zeit verbringen</h2>
+  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+</div>
 
     </div>
+    <div class="slide" u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1200px; height: 650px;">
 
-    <footer>
-<ul>
-  
-  <li><a href="">Link 1</a></li>
-  
-  <li><a href="">Link 2</a></li>
-  
-  <li><a href="">Link 3</a></li>
-  
-  <li><a href="">Link 4</a></li>
-  
-  <li><a href="">Link 5</a></li>
-  
-</ul>
-</footer>
+      
+      <div><img u="image" src="/assets/img/slider/image01.jpg" /></div>
+      <div><img u="image" src="/assets/img/slider/image02.jpg" /></div>
+      <div><img u="image" src="/assets/img/slider/image03.jpg" /></div>
+    </div>
+  </div>
+</div>
+
+    <div id="main">
+      <div class="column two-thirds">
+        <h1>Eine unvergessliche Zeit verbringen</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="column one-third">
+
+      </div>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
 
     <script>
   $( function() {

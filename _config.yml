@@ -33,7 +33,7 @@ exclude:
   - Gemfile.lock
 
 sass:
-  sass_dir : _sass
+  sass_dir : assets/css/_sass
 
 includes_dir : _includes
 layouts_dir : _layouts
